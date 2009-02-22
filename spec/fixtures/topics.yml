@@ -1,11 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  slug: MyString
-  name: MyString
-  description: MyText
+foo:
+  slug: foo
+  name: Foo
+  description: Lorum Ipsum
 
-two:
-  slug: MyString
-  name: MyString
-  description: MyText
+bar:
+  slug: bar
+  name: The Bar and Grill
+  description: Lorum Ipsum

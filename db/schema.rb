@@ -16,15 +16,14 @@ ActiveRecord::Schema.define(:version => 20090222020858) do
     t.string   "title",       :null => false
     t.text     "description", :null => false
     t.string   "url",         :null => false
-    t.integer  "topics_id",   :null => false
+    t.integer  "topic_id",    :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "links", ["slug", "topics_id"], :name => "index_links_on_slug_and_topics_id", :unique => true
+  add_index "links", ["slug", "topic_id"], :name => "index_links_on_slug_and_topic_id", :unique => true
   add_index "links", ["slug"], :name => "index_links_on_slug"
-  add_index "links", ["topics_id"], :name => "index_links_on_topics_id", :unique => true
-  add_index "links", ["url", "topics_id"], :name => "index_links_on_url_and_topics_id", :unique => true
+  add_index "links", ["url", "topic_id"], :name => "index_links_on_url_and_topic_id", :unique => true
 
   create_table "topics", :force => true do |t|
     t.string   "slug",        :null => false

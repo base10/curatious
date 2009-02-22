@@ -1,13 +1,15 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
+foo_link:
   slug: MyString
   title: MyString
   description: MyText
   url: MyString
+  topic: foo
 
-two:
+bar_link:
   slug: MyString
   title: MyString
   description: MyText
   url: MyString
+  topic: bar
