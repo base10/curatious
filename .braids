@@ -1,0 +1,8 @@
+--- 
+vendor/plugins/validates_url: 
+  squashed: true
+  url: git://github.com/adr1anx/validates_url.git
+  type: git
+  revision: d1894c7398800ab15178f5f7fa83ebe92ed911dd
+  branch: master
+  remote: braid/vendor/plugins/validates-url
