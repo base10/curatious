@@ -5,14 +5,15 @@ class CreateLinks < ActiveRecord::Migration
       t.string     :title,        :null => false
       t.text       :description,  :null => false
       t.string     :url,          :null => false
-      t.references :topics
+      t.references :topics,       :null => false
 
       t.timestamps
     end
 
     add_index :links, :slug
-    add_index :links, :topic_id, :unique => true
-    add_index :links, [:slug, :topic_id], :unique => true
+    add_index :links, :topics_id, :unique => true
+    add_index :links, [:slug, :topics_id], :unique => true
+    add_index :links, [:url, :topics_id], :unique => true
   end
 
   def self.down
