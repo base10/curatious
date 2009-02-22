@@ -1,4 +1,5 @@
 --colour
+--format h:spec_report/index.html
 --format progress
 --loadby mtime
 --reverse
