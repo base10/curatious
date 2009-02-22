@@ -34,5 +34,13 @@ describe Topic do
       @topic.send( method + '=', get_string(256) )
       @topic.should_not be_valid
     end
+
+    it "should require #{method} to be unique" do
+      pending
+    end
+  end
+
+  it "can accept nested links" do
+    pending
   end
 end
