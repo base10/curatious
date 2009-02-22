@@ -6,6 +6,5 @@ class Link < ActiveRecord::Base
   validates_length_of :url,         :in      => 12..255
   validates_length_of :description, :minimum => 5
 
-  ## TODO: Verify the format of the URL
-
+  validate_url :url, :check_http => false
 end

@@ -12,7 +12,7 @@ describe Link do
       :slug        => "value for slug",
       :title       => "value for title",
       :description => "value for description",
-      :url         => "value for url",
+      :url         => "http://example.com",
       :topic       => topics(:bar)
     }
 
@@ -53,6 +53,26 @@ describe Link do
   end
 
   it "should require url's format to be valid" do
-    pending
+    @link.url = 'http://example.com/'
+    @link.should be_valid
+
+    @link.url = 'http://www.example.com/'
+    @link.should be_valid
+
+    @link.url = 'http://subdomain.example.fr/'
+    @link.should be_valid
+
+    ## It'd be nice if validate_url recognized a different scheme
+    @link.url = 'ftp://example.com/'
+    @link.should_not be_valid
+
+    @link.url = "example.com"
+    @link.should_not be_valid
+
+    @link.url = "http://foo"
+    @link.should_not be_valid
+
+    @link.url = "http://.com"
+    @link.should_not be_valid
   end
 end
